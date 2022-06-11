@@ -15,7 +15,7 @@
 #include <string>
 #include "windows.h"
 
-class   utilities {
+class utilities {
 public:
     template <typename T = std::uint64_t>
     bool valid_ptr(T ptr) {

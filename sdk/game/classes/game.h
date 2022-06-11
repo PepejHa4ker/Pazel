@@ -27,6 +27,12 @@ public:
 class world
 {
 public:
+
+    void set_terrain_grid( float value ) // 0 - remove ; 12 - set
+    {
+        *reinterpret_cast< float* >( this + 398493 ) = value;
+    }
+
     uintptr_t get_far_table( )
     {
         if( !g_utils.valid_ptr( this ) )
@@ -121,6 +127,8 @@ public:
 
         return reinterpret_cast< entity* >( get_local_player( ) );
     }
+
+
 };
 
 game g_game;
